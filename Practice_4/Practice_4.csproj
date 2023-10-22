@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7BF542D8-C955-4E96-A57D-9BB3C093DFB8}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Practice_4</RootNamespace>
+    <AssemblyName>Practice_4</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Autobase\Autobase.csproj">
+      <Project>{27cc1533-0748-43ef-91af-96ebf1398d2a}</Project>
+      <Name>Autobase</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Home_Library\Home_Library.csproj">
+      <Project>{5ec0e26f-0da4-4e04-b6bc-66a232842b3c}</Project>
+      <Name>Home_Library</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Payment\Payment.csproj">
+      <Project>{57179804-8726-4d63-a8dd-958d193c8ed0}</Project>
+      <Name>Payment</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Railway_ticket_office\Railway_ticket_office.csproj">
+      <Project>{45c79bf8-e108-4aac-8159-cfed8218078f}</Project>
+      <Name>Railway_ticket_office</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Student\Student.csproj">
+      <Project>{c2425827-38fc-4c3f-b521-c6733402af14}</Project>
+      <Name>Student</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Zoo_Animal\Zoo_Animal.csproj">
+      <Project>{b682e8bb-142c-4d46-967b-81214b00b184}</Project>
+      <Name>Zoo_Animal</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
